@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MONEYLOG" Class="DBMoneyDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-EFBO3C1\SQLSEVER;Initial Catalog=MONEYLOG;User ID=admin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MONEYLOGConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.money" Member="moneys">
+    <Type Name="money">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="content" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="money" Member="money1" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="category" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="note" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>
